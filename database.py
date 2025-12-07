@@ -75,6 +75,27 @@ def init_database() -> None:
     print("[+] Database initialized successfully.")
 
 
+def clear_database() -> None:
+    """
+    Clear all data from the database (keeps the schema).
+    Useful for starting fresh monitoring sessions.
+    """
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    # Delete in order due to foreign key relationships
+    cursor.execute("DELETE FROM Ports")
+    cursor.execute("DELETE FROM Hosts")
+    cursor.execute("DELETE FROM Scans")
+    
+    # Reset auto-increment counters
+    cursor.execute("DELETE FROM sqlite_sequence WHERE name IN ('Ports', 'Hosts', 'Scans')")
+    
+    conn.commit()
+    conn.close()
+    print("[+] Database cleared successfully.")
+
+
 def insert_scan(timestamp: Optional[datetime] = None) -> int:
     """
     Insert a new scan record.
