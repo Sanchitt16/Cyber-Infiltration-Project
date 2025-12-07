@@ -2,18 +2,53 @@
 
 A **Blue Team** monitoring tool that scans a network, saves the state to a database, and detects changes (new devices, new open ports, service changes) over time.
 
+---
+
+## 🌐 Live Demo
+
+**[▶️ Click Here to Try the Live Demo](https://your-app-name.streamlit.app)**
+
+> No installation required! The demo shows simulated network data with security alerts.
+
+---
+
+## ⚡ Quick Start (Windows)
+
+### Option 1: One-Click Setup
+```
+Double-click setup.bat
+```
+That's it! The script installs dependencies and launches the dashboard.
+
+### Option 2: Manual Setup
+```bash
+# 1. Clone and install
+git clone https://github.com/Sanchitt16/Cyber-Infiltration-Project.git
+cd Cyber-Infiltration-Project
+pip install -r requirements.txt
+
+# 2. Launch the Dashboard
+streamlit run app.py
+```
+
+Then open **http://localhost:8501** in your browser and start scanning!
+
+---
+
 ## 🎯 Features
 
 - **Network Scanning**: Scan IP addresses or subnets using Nmap
 - **Database Storage**: Store scan results in SQLite database
-- **Change Detection**: Track new devices, open ports, and service changes (coming soon)
-- **Dashboard**: Visualize network data with Streamlit (coming soon)
-- **Alerting**: Discord Webhook notifications (coming soon)
+- **Anomaly Detection**: Detect new devices, open ports, service changes, and security threats
+- **Web Dashboard**: Beautiful Streamlit UI with real-time status
+- **Continuous Monitoring**: Automated scanning at configurable intervals
+- **Security Alerts**: Detect brute force targets, suspicious ports, and aggressive scanning
+- **Demo Mode**: Works without Nmap for demonstrations and testing
 
 ## 📋 Prerequisites
 
 1. **Python 3.x** - Make sure Python is installed
-2. **Nmap** - The Nmap port scanner must be installed on your system
+2. **Nmap** (Optional for Demo Mode) - Required for real network scanning
    - Windows: Download from https://nmap.org/download.html
    - Linux: `sudo apt install nmap`
    - macOS: `brew install nmap`
@@ -33,9 +68,14 @@ pip install -r requirements.txt
 
 ```
 Cyber-Infiltration-Project/
-├── init.py           # Package initialization and entry point
-├── database.py       # SQLite database operations
+├── app.py            # Streamlit Web Dashboard
+├── monitor.py        # Continuous monitoring script
+├── detector.py       # Anomaly detection engine
 ├── scanner.py        # Nmap scanning functionality
+├── database.py       # SQLite database operations
+├── setup.bat         # One-click Windows setup script
+├── view_db.py        # Database viewer utility
+├── init.py           # Package initialization
 ├── requirements.txt  # Python dependencies
 └── README.md         # This file
 ```
