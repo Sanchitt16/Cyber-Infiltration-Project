@@ -1,39 +1,42 @@
-# Network Change Detector & Anomaly Monitor
+# 🛡️ Cyber Infiltration & Defense Monitor
 
-A **Blue Team** monitoring tool that scans a network, saves the state to a database, and detects changes (new devices, new open ports, service changes) over time.
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat&logo=python)
+![Security](https://img.shields.io/badge/Security-Blue%20Team-red?style=flat&logo=hackthebox)
+![Platform](https://img.shields.io/badge/Platform-Streamlit-FF4B4B?style=flat&logo=streamlit)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+A full-stack **Blue Team** security tool that bridges the gap between offensive reconnaissance and defensive monitoring. It establishes a network baseline, continuously scans for deviations, and alerts on potential "Infiltration" attempts (new devices, rogue ports, or service changes).
 
 ---
 
 ## 🌐 Live Demo
 
-**[▶️ Click Here to Try the Live Demo](https://cyber-infiltration-project-gfvncdmhwsfmndxqr3yzbx.streamlit.app)**
+### [▶️ Click Here to Launch the Dashboard](https://cyber-infiltration-project-gfvncdmhwsfmndxqr3yzbx.streamlit.app)
 
-> No installation required! The demo shows simulated network data with security alerts.
+> **Note:** The cloud demo runs in **Simulation Mode** (using synthetic data) to demonstrate the alert logic without requiring local network access.
 
 ---
 
-## ⚡ Quick Start (Windows)
+## ⚡ Quick Start (Local)
 
-### Option 1: One-Click Setup
-```
-Double-click setup.bat
-```
-That's it! The script installs dependencies and launches the dashboard.
+### Option 1: One-Click Setup (Windows)
+Simply double-click the `setup.bat` file included in this repository.
+* ✅ Checks for Python & Nmap
+* ✅ Creates a virtual environment
+* ✅ Installs dependencies
+* ✅ Launches the Dashboard automatically
 
-### Option 2: Manual Setup
+### Option 2: Manual Setup (Mac/Linux)
 ```bash
-# 1. Clone and install
-git clone https://github.com/Sanchitt16/Cyber-Infiltration-Project.git
+# 1. Clone the repo
+git clone [https://github.com/Sanchitt16/Cyber-Infiltration-Project.git](https://github.com/Sanchitt16/Cyber-Infiltration-Project.git)
 cd Cyber-Infiltration-Project
+
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 2. Launch the Dashboard
+# 3. Launch the tool
 streamlit run app.py
-```
-
-Then open **http://localhost:8501** in your browser and start scanning!
-
----
 
 ## 🎯 Features
 
