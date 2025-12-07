@@ -6,7 +6,7 @@ A **Blue Team** monitoring tool that scans a network, saves the state to a datab
 
 ## 🌐 Live Demo
 
-**[▶️ Click Here to Try the Live Demo](https://your-app-name.streamlit.app)**
+**[▶️ Click Here to Try the Live Demo](https://cyber-infiltration-project-gfvncdmhwsfmndxqr3yzbx.streamlit.app)**
 
 > No installation required! The demo shows simulated network data with security alerts.
 

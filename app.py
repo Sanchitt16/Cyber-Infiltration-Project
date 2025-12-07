@@ -248,8 +248,8 @@ if 'auto_refresh' not in st.session_state:
 if 'scan_count' not in st.session_state:
     st.session_state.scan_count = 0
 if 'demo_mode' not in st.session_state:
-    # Default to demo mode on Streamlit Cloud or if local modules unavailable
-    st.session_state.demo_mode = not LOCAL_MODE_AVAILABLE
+    # Demo mode ON by default for best first impression
+    st.session_state.demo_mode = True
 
 # =============================================================================
 # Helper Functions
